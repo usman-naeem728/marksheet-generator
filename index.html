@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="form-style-10" id="display">
+    <h1>Marksheet Generator<span>Enter your details</span></h1>
+
+    <div class="section"><span>1</span>First Name & Roll NO</div>
+    <div class="inner-wrap">
+      <label>Your Full Name <input type="text" name="field1" id="fName" /></label>
+      <label>FATHER'S Name <input type="text" name="field1" id="faName" /></label>
+      <label>Roll NO <input type="text" name="field1" id="rollno"></label>
+    </div>
+
+    <div class="section"><span>2</span>Subject Name</div>
+    <div class="inner-wrap">
+      <label>Subject 1 <input type="text" name="field3" id="subject1" /></label>
+      <label>Subject 2<input type="text" name="field4" id="subject2" /></label>
+      <label>subject 3<input type="text" name="field4" id="subject3" /></label>
+      <label>subject 4 <input type="text" name="field4" id="subject4" /></label>
+      <label>subject 5 <input type="text" name="field4" id="subject5" /></label>
+      
+      <div class="button-section">
+        <button onclick="confirmSubject()" class="btn">confirm subjects</button>
+      </div>
+     
+      <p style="color: red; display: none;" id="msg"> Fill all subjects</p>
+     
+
+    </div>
+    <div id="innerWrap" style="display: none;">
+      <div class="section"><span>3</span>Obtained Numbers out of 100</div>
+      <div class="inner-wrap">
+        <label id="subjectName1"></label><input type="text" name="field5" maxlength="2" id="masubject1" /><br>
+        <label id="subjectName2"></label><input type="text" name="field4" maxlength="2" id="masubject2" /><br>
+        <label id="subjectName3"></label><input type="text" name="field4" maxlength="2" id="masubject3" /><br>
+        <label id="subjectName4"></label><input type="text" name="field6" maxlength="2" id="masubject4" /><br>
+        <label id="subjectName5"></label><input type="text" name="field6" maxlength="2" id="masubject5" /><br>
+
+      </div>
+
+
+      <div class="button-section">
+        <button  onclick="collectData()" class="btn" id="btn">Generate Marksheet</button>
+      </div>
+       
+      <p style="color: red; display: none;" id="msg2"> Fill all contexts</p>
+
+
+    </div>
+  </div>
+  <div class="main" style="display: none;" id="markSheet">
+
+
+    <div class="header">
+      <div class="heading">
+        <h1>BOARD OF SECONDARY EDUCATION KARACHI</h1>
+      </div>
+      <div class="stdData">
+        <div class="name">
+          <span>NAME: </span><span style="margin-left: 34%;" id="name"></span>
+        </div><br>
+        <div class="fathername">
+          <span>FATHER'S NAME: </span><span style="margin-left: 20%;" id="fagetname"></span>
+        </div><br>
+        <div class="rollno">
+          <span>ROLLNO: </span><span style="margin-left: 31%;" id="rollget"></span>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <table>
+      <tr>
+        <th>SUBJECT</th>
+        <th>MARKS OBTAINED</th>
+        <th>TOTAL MARKS</th>
+        <th>PERCENT</th>
+        <th>GRADE</th>
+      </tr>
+      <tr>
+        <td id="subjectGet1"></td>
+        <td id="magetsubject1"></td>
+        <td id="">100</td>
+        <td id="percent1"></td>
+        <td id="grade1"></td>
+
+      </tr>
+      <tr>
+        <td id="subjectGet2"></td>
+        <td id="magetsubject2"></td>
+        <td>100</td>
+        <td id="percent2"></td>
+        <td id="grade2"></td>
+
+      </tr>
+      <tr>
+        <td id="subjectGet3"></td>
+        <td id="magetsubject3"></td>
+        <td>100</td>
+        <td id="percent3"></td>
+        <td id="grade3"></td>
+
+      </tr>
+      <tr>
+        <td id="subjectGet4"></td>
+        <td id="magetsubject4"></td>
+        <td>100</td>
+        <td id="percent4"></td>
+        <td id="grade4"></td>
+
+      </tr>
+      <tr>
+        <td id="subjectGet5"></td>
+        <td id="magetsubject5"></td>
+        <td>100</td>
+        <td id="percent5"></td>
+        <td id="grade5"></td>
+
+      </tr>
+      <tr>
+        <td>Grand TOTAL</td>
+        <td id="totalobtmarks"></td>
+        <td>500</td>
+        <td colspan="2"></td>
+
+      </tr>
+      <tr>
+        <td>OVERALL GRADE</td>
+        <td colspan="2" id="overallgradepass"></td>
+
+        <td colspan="2" id="overallpercentage"></td>
+
+      </tr>
+    </table>
+
+
+
+  </div>
+
+  <div class="button-section" style="display:none ;" id="printBtn">
+    <button  onclick="window.print()" class="btn" id="btn2">Print Marsheet</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
